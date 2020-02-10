@@ -2,13 +2,11 @@ const lavalink = require('discord.js-lavalink')
 const MusicServer = require('./musicServer')
 
 class MusicServers {
-  constructor (client, nodes) {
+  constructor (client, nodes, options) {
     this.servers = new Map()
     this.client = client
     this.nodes = nodes
-    this.playerManager = new lavalink.PlayerManager(this.client, this.nodes, {
-      user: this.client.user.id
-    })
+    this.playerManager = new lavalink.PlayerManager(this.client, this.nodes, options)
   }
 
   get (gID) {
