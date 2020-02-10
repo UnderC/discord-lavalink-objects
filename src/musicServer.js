@@ -55,8 +55,8 @@ class MusicServer extends events.EventEmitter {
   setVolume (vol) {
     if (!vol) return
     const before = this.volume
-    this.volume = vol % 1 === 0 ? vol / 100 : vol
-    if (this.player) this.player.setVolume(this.volume)
+    this.volume = vol % 1 === 0 ? vol : vol * 100
+    if (this.player) this.player.volume(this.volume)
     return [before, this.volume]
   }
 

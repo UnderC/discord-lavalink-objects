@@ -18,7 +18,16 @@ class MusicSearcher {
       { headers: { Authorization: this.pass } }
     )
 
-    return result.json()
+    return this.model(await result.json())
+  }
+
+  model (raw) {
+    const result = { items: [] }
+    for (const track of raw.tracks) {
+      track.info.track = track.track
+      result.items.push(track.info)
+    }
+    return result
   }
 
   /*

@@ -27,9 +27,7 @@ const arrayToSec = (durations) => {
 
 class MusicItem {
   constructor (obj) {
-    if (obj.track) this.track = obj.track
-    if (obj.info) obj = obj.info
-
+    this.track = obj.track
     this.link = obj.uri
     this.title = obj.title
     this.thumbnail = `https://img.youtube.com/vi/${obj.identifier}/default.jpg`
