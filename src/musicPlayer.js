@@ -12,6 +12,7 @@ class MusicPlayer {
   play (np) {
     this.server.player.play(np.track)
     this.server.player.once('end', this.end.bind(this))
+    this.server.player.volume(this.server.volume)
   }
 
   end (data) {

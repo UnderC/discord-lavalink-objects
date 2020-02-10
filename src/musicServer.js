@@ -12,7 +12,7 @@ class MusicServer extends events.EventEmitter {
     this.skipSafe = false
     this.queue = new MusicQueue()
     this.nowPlaying = null
-    this.volume = 0.5
+    this.volume = 50
     this.repeat = false
     this.handled = false
     this._ = new MusicPlayer(this)
@@ -57,7 +57,7 @@ class MusicServer extends events.EventEmitter {
     const before = this.volume
     this.volume = vol % 1 === 0 ? vol : vol * 100
     if (this.player) this.player.volume(this.volume)
-    return [before, this.volume]
+    return [before / 100, this.volume / 100]
   }
 
   stateToggle () {
