@@ -14,7 +14,7 @@ class MusicSearcher {
 
   async _ (query) {
     const result = await fetch(
-      `http://${this.host}:${this.port}/loadtracks?identifier=${query}`,
+      `http://${this.host}:${this.port}/loadtracks?identifier=${encodeURI(query)}`,
       { headers: { Authorization: this.pass } }
     )
 
