@@ -1,0 +1,23 @@
+{
+  "name": "discord-lavalink-objects",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/underc/discord-lavalink-objects.git"
+  },
+  "author": "UnderC",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/underc/discord-lavalink-objects/issues"
+  },
+  "homepage": "https://github.com/underc/discord-lavalink-objects#readme",
+  "dependencies": {
+    "discord.js-lavalink": "^2.2.3",
+    "node-fetch": "^2.6.0"
+  }
+}
