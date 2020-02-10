@@ -23,7 +23,7 @@ class MusicServer extends events.EventEmitter {
     this.player = this.playerManager({
       guild: this.guild,
       channel: voiceChannel.id,
-      host: this.playerManager.nodes[0].host
+      host: this.playerManager.nodes.keys().next().value
     })
   }
 
