@@ -20,7 +20,7 @@ class MusicServer extends events.EventEmitter {
 
   join (voiceChannel) {
     if (this.player) return
-    this.player = this.playerManager({
+    this.player = this.playerManager.join({
       guild: this.guild,
       channel: voiceChannel.id,
       host: this.playerManager.nodes.keys().next().value
