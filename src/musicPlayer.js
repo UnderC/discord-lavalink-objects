@@ -17,7 +17,7 @@ class MusicPlayer {
   end (data) {
     if (data.reason === 'REPLACED') return
     if (this.loop) this.server.queue.add(this.server.nowPlaying)
-    if (this.server.queue.isLast) return this.server.disconnect()
+    if (this.server.queue.isLast) return this.server.leave()
     this.start()
   }
 }
