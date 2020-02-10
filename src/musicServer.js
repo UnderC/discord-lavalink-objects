@@ -48,7 +48,7 @@ class MusicServer extends events.EventEmitter {
   stop () {
     if (!this.player) return
     this.skipSafe = true
-    this.player.end()
+    this.player.stop()
     return true
   }
 
@@ -68,7 +68,7 @@ class MusicServer extends events.EventEmitter {
 
   skip () {
     if (!this.player) return
-    this.player.end()
+    this.player.stop()
     return true
   }
 
