@@ -24,7 +24,6 @@ class MusicServers {
   del (gID) {
     this.get(gID).removeAllListeners()
     this.servers.delete(gID)
-    this.handlers.delete(gID)
   }
 }
 

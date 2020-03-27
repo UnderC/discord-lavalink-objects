@@ -29,12 +29,13 @@ class MusicServer extends events.EventEmitter {
 
   leave () {
     if (!this.player) return
+    this.stop()
     this.player.disconnect()
     this.player.destroy()
     this.playerManager.leave(this.guild)
 
-    this.stop()
     this.clear()
+    delete this.player
     return true
   }
 
